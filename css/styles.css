@@ -23,13 +23,11 @@ body {
     background-color: var(--primary-color);
     box-shadow: 0 2px 4px var(--shadow-color);
     color: var(--light-bg);
-}
-
-.main-header .logo a {
-    text-decoration: none;
-    color: inherit;
-    font-size: 1.5rem;
-    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .main-header .logo img {
@@ -58,6 +56,7 @@ body {
     padding: 2rem;
     max-width: 900px;
     margin: 0 auto;
+    padding-top: 80px;
 }
 
 .main-content section {
@@ -92,6 +91,10 @@ h1, h2, h3 {
     margin-bottom: 1rem;
 }
 
+.menu-item:last-child {
+    border-bottom: none;
+}
+
 .menu-item h3 {
     margin-top: 0;
 }
@@ -99,6 +102,16 @@ h1, h2, h3 {
 .menu-item .price {
     font-weight: bold;
     color: var(--secondary-color);
+}
+
+/* Estilo para a imagem do cardápio */
+.menu-item-image {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px auto 0 auto;
 }
 
 .main-footer {
@@ -180,7 +193,7 @@ h1, h2, h3 {
     }
 }
 
-
+/* Animações e Transições */
 .fade-in-section {
     opacity: 0;
     transform: translateY(20px);
@@ -194,8 +207,20 @@ h1, h2, h3 {
 
 /* FAQ */
 .faq-section {
-    background-color: var(--light-text);
-    color: var(--dark-text);
+    background-color: var(--white-box-bg);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+/* Efeito de revelar a descrição */
+.menu-details {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.menu-item.active .menu-details {
+    display: block;
+    max-height: 500px; /* Um valor alto o suficiente para caber o conteúdo */
+}
