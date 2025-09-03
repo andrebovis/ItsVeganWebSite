@@ -9,10 +9,11 @@
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     color: var(--dark-text);
-    background-color: var(--light-bg); 
+    background-color: var(--light-bg);
 }
 
 h1, h2, h3 {
@@ -240,4 +241,41 @@ p {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-btn img {
+    height: 24px;
+    width: 24px;
+}
+
+.whatsapp-btn span {
+    font-weight: bold;
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .whatsapp-btn span {
+        display: block;
+    }
 }
