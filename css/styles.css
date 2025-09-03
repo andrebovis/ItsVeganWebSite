@@ -15,6 +15,21 @@ body {
     background-color: var(--light-bg); 
 }
 
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -67,10 +82,6 @@ body {
     margin-bottom: 2rem;
 }
 
-h1, h2, h3 {
-    color: var(--primary-color);
-}
-
 .hero {
     text-align: center;
 }
@@ -85,18 +96,32 @@ h1, h2, h3 {
     color: var(--dark-text);
 }
 
-.menu-item {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-.menu-item:last-child {
-    border-bottom: none;
+.menu-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px var(--shadow-color);
 }
 
 .menu-item h3 {
-    margin-top: 0;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
 }
 
 .menu-item .price {
@@ -104,14 +129,22 @@ h1, h2, h3 {
     color: var(--secondary-color);
 }
 
-/* Estilo para a imagem do cardápio */
 .menu-item-image {
-    display: block;
     width: 100%;
-    max-width: 300px;
     height: auto;
-    border-radius: 8px;
-    margin: 10px auto 0 auto;
+    border-radius: 4px;
+}
+
+.menu-details {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.menu-item.active .menu-details {
+    display: block;
+    max-height: 500px;
 }
 
 .main-footer {
@@ -122,7 +155,6 @@ h1, h2, h3 {
     margin-top: 2rem;
 }
 
-/* Formulário */
 .form-section form {
     display: flex;
     flex-direction: column;
@@ -156,7 +188,6 @@ h1, h2, h3 {
     background-color: var(--secondary-color);
 }
 
-/* Mobile Menu */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -166,7 +197,7 @@ h1, h2, h3 {
 .menu-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--light-text);
+    background-color: var(--light-bg);
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -193,7 +224,6 @@ h1, h2, h3 {
     }
 }
 
-/* Animações e Transições */
 .fade-in-section {
     opacity: 0;
     transform: translateY(20px);
@@ -205,22 +235,9 @@ h1, h2, h3 {
     transform: translateY(0);
 }
 
-/* FAQ */
 .faq-section {
     background-color: var(--white-box-bg);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--shadow-color);
-}
-/* Efeito de revelar a descrição */
-.menu-details {
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-.menu-item.active .menu-details {
-    display: block;
-    max-height: 500px; /* Um valor alto o suficiente para caber o conteúdo */
 }
