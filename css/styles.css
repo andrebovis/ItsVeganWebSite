@@ -35,7 +35,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 2rem 4rem; 
     background-color: var(--primary-color);
     box-shadow: 0 2px 4px var(--shadow-color);
     color: var(--light-bg);
@@ -46,8 +46,19 @@ p {
     z-index: 1000;
 }
 
-.main-header .logo img {
-    height: 50px;
+.header-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+}
+
+.main-header nav {
+    margin-left: auto; /* Esta propriedade empurra o menu para a direita, criando o espaço vazio no meio */
 }
 
 .main-header nav ul {
@@ -72,7 +83,7 @@ p {
     padding: 2rem;
     max-width: 900px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 150px;
 }
 
 .main-content section {
@@ -83,16 +94,21 @@ p {
     margin-bottom: 2rem;
 }
 
-.hero {
+.hero-banner {
+    background-color: var(--light-bg);
+    padding: 4rem 2rem;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
-.hero h1 {
+.hero-banner h2 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
+    color: var(--primary-color);
 }
 
-.hero p {
+.hero-banner p {
     font-size: 1.2rem;
     color: var(--dark-text);
 }
@@ -101,6 +117,8 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .menu-item {
@@ -146,6 +164,47 @@ p {
 .menu-item.active .menu-details {
     display: block;
     max-height: 500px;
+}
+
+.menu-item-preview {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    text-align: center;
+}
+
+.menu-item-preview p {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.call-to-action {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.call-to-action a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.call-to-action a:hover {
+    color: var(--primary-color);
+}
+
+.google-maps {
+    height: 300px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    color: #999;
 }
 
 .main-footer {
@@ -223,6 +282,10 @@ p {
     .menu-toggle {
         display: flex;
     }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 }
 
 .fade-in-section {
@@ -257,7 +320,6 @@ p {
     gap: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    transition: transform 0.3s ease;
 }
 
 .whatsapp-btn:hover {

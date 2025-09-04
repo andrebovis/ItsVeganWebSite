@@ -24,7 +24,6 @@
             <li><a href="contact.html">Contato</a></li>
             <li><a href="careers.html">Carreiras</a></li>
             <li><a href="faq.html">FAQ</a></li>
-        
         </ul>
     </nav>
     <div class="menu-toggle">
@@ -35,17 +34,32 @@
 </header>
 
 <main class="main-content">
-    <section class="contact-section fade-in-section">
-        <h2>Contato</h2>
-        <p>Se tiver alguma dúvida, sugestão ou quiser fazer um pedido, entre em contato conosco.</p>
-        <p>Telefone: (11) 98765-4321</p>
-        <p>E-mail: contato@itsvegan.com</p>
+    <section class="form-section">
+        <h2>Fale Conosco</h2>
+        <p>Preencha o formulário abaixo e entraremos em contato em breve.</p>
+        <form>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
     </section>
 </main>
 
 <footer class="main-footer">
     <p>&copy; 2025 ItsVeganWebSite. Todos os direitos reservados.</p>
 </footer>
+
+<a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp">
+    <span>Interaja com a nossa equipe!</span>
+</a>
 
 <script src="js/main.js"></script>
 </body>
