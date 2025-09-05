@@ -58,7 +58,7 @@ p {
 }
 
 .main-header nav {
-    margin-left: auto; /* Esta propriedade empurra o menu para a direita, criando o espaço vazio no meio */
+    margin-left: auto;
 }
 
 .main-header nav ul {
