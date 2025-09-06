@@ -197,14 +197,14 @@ p {
 }
 
 .google-maps {
-    height: 300px;
-    background-color: #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px var(--shadow-color);
-    color: #999;
+
+    display: block; 
+
+    margin-top: 30px; 
+}
+
+.main-content h2 {
+    margin-bottom: 5px;
 }
 
 .main-footer {
