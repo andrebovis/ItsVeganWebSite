@@ -346,3 +346,31 @@ p {
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--shadow-color);
 }
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05); /* Efeito para dar um leve zoom ao passar o mouse */
+}
+
+.whatsapp-btn img {
+    height: 24px;
+    width: 24px;
+}
+
+.whatsapp-btn span {
+    font-weight: bold;
+}
